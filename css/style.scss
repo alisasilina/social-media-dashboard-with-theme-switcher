@@ -1,0 +1,167 @@
+@import 'config/colors';
+@import 'config/fonts';
+@import 'config/mixins';
+
+@import 'components/switcher';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  padding: 22px;
+}
+
+header {
+  border-bottom: 1px solid var(--text-secondary);
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  p {
+    color: var(--text-secondary);
+    padding-bottom: 16px;
+    font-weight: bold;
+  }
+}
+
+.main-cards-container {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-card {
+  background: var(--card-bg);
+  margin-bottom: 22px;
+  padding: 28px 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.username {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+}
+
+.fa-facebook-square {
+  color: $facebook;
+}
+
+.fa-twitter {
+  color: $twitter;
+}
+
+.fa-instagram {
+  background: $instagram;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube-square {
+  color: $youtube;
+}
+
+.followers__number {
+  font-size: 42px;
+  line-height: 42px;
+  margin-bottom: 8px;
+}
+
+.followers__title {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.followers__today {
+  font-weight: bold;
+  margin-top: 30px;
+  i {
+    margin-right: 6px;
+  }
+}
+
+.up {
+  color: $lime-green;
+  i {
+    font-size: 12px !important;
+    margin-right: 6px;
+  }
+}
+
+.down {
+  color: $bright-red;
+  i {
+    font-size: 12px !important;
+    margin-right: 6px;
+  }
+}
+
+.overview__title {
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin: 10px 0 24px;
+}
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-card {
+  background: var(--card-bg);
+  margin-bottom: 22px;
+  padding: 28px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview__number {
+  text-align: left;
+  p {
+    margin-bottom: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--text-secondary);
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.overview__percents {
+  text-align: right;
+  i:first-child {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  p {
+    font-size: 12px;
+    padding-top: 8px;
+    font-weight: bold;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: var(--text-secondary);
+  }
+}

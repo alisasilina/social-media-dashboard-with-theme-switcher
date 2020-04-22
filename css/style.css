@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-main: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%); }
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-main: hsl(230, 17%, 14%);
+  --text-secondary: hsl(228, 12%, 44%); }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; }
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0; }
+  .toggle-container p {
+    color: var(--text-secondary);
+    font-weight: bold; }
+
+.toggle {
+  cursor: pointer;
+  display: inline-block; }
+
+.toggle-switch {
+  display: inline-block;
+  background: linear-gradient(45deg, #378fe6, #3eda82);
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s; }
+  .toggle-switch:before, .toggle-switch:after {
+    content: ""; }
+  .toggle-switch:before {
+    display: block;
+    background: var(--bg);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s; }
+  .toggle:hover .toggle-switch:before {
+    background: var(--bg); }
+  .toggle-checkbox:checked + .toggle-switch {
+    background: #aeb3cb; }
+    .toggle-checkbox:checked + .toggle-switch:before {
+      left: 30px; }
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden; }
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+  padding: 22px; }
+
+header {
+  border-bottom: 1px solid var(--text-secondary); }
+  header h3 {
+    font-size: 18px;
+    margin-bottom: 8px; }
+  header p {
+    color: var(--text-secondary);
+    padding-bottom: 16px;
+    font-weight: bold; }
+
+.main-cards-container {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; }
+
+.main-card {
+  background: var(--card-bg);
+  margin-bottom: 22px;
+  padding: 28px 0;
+  text-align: center;
+  border-radius: 5px; }
+
+.username {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .username i {
+    margin-right: 8px;
+    font-size: 24px; }
+
+.fa-facebook-square {
+  color: deepskyblue; }
+
+.fa-twitter {
+  color: #1ca0f2; }
+
+.fa-instagram {
+  background: linear-gradient(45deg, #fdc468, #df4996);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.fa-youtube-square {
+  color: #c4032a; }
+
+.followers__number {
+  font-size: 42px;
+  line-height: 42px;
+  margin-bottom: 8px; }
+
+.followers__title {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+.followers__today {
+  font-weight: bold;
+  margin-top: 30px; }
+  .followers__today i {
+    margin-right: 6px; }
+
+.up {
+  color: #1db489; }
+  .up i {
+    font-size: 12px !important;
+    margin-right: 6px; }
+
+.down {
+  color: #dc414c; }
+  .down i {
+    font-size: 12px !important;
+    margin-right: 6px; }
+
+.overview__title {
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin: 10px 0 24px; }
+
+.overview-container {
+  display: flex;
+  flex-direction: column; }
+
+.overview-card {
+  background: var(--card-bg);
+  margin-bottom: 22px;
+  padding: 28px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; }
+
+.overview__number {
+  text-align: left; }
+  .overview__number p {
+    margin-bottom: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--text-secondary); }
+  .overview__number h2 {
+    font-size: 24px; }
+
+.overview__percents {
+  text-align: right; }
+  .overview__percents i:first-child {
+    font-size: 24px;
+    margin-bottom: 18px; }
+  .overview__percents p {
+    font-size: 12px;
+    padding-top: 8px;
+    font-weight: bold; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    color: var(--text-secondary); }
+
+/*# sourceMappingURL=style.css.map */
