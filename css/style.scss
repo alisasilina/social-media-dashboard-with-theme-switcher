@@ -16,13 +16,19 @@ body {
   background: var(--bg);
   color: var(--text-main);
   padding: 22px;
+  height: 100vh;
+  position: relative;
 }
 
 header {
   border-bottom: 1px solid var(--text-secondary);
   h3 {
     font-size: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+
+    @include for-tablet-portrait-up {
+      font-size: 24px;
+    }
   }
   p {
     color: var(--text-secondary);
@@ -35,6 +41,18 @@ header {
   font-size: 12px;
   display: flex;
   flex-direction: column;
+
+  @include for-tablet-portrait-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 22px;
+  }
+
+  @include for-tablet-landscape-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 22px;
+  }
 }
 
 .main-card {
@@ -43,6 +61,45 @@ header {
   padding: 28px 0;
   text-align: center;
   border-radius: 5px;
+  border-top: 5px solid transparent;
+  &:hover {
+    background: var(--hover-bg);
+  }
+}
+
+// Facebook card top
+.main-card:nth-child(1) {
+  border-top-color: $facebook;
+}
+
+// Twitter card top
+.main-card:nth-child(2) {
+  border-top-color: $twitter;
+}
+
+// Instagram card top
+.main-card:nth-child(3) {
+  position: relative;
+  border-top: 5px solid transparent;
+  border-radius: 0 0 5px 5px;
+  margin-top: 5px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -10px 0 0 0;
+    border-radius: 5px;
+    background: $instagram;
+  }
+}
+
+// Youtube card top
+.main-card:nth-child(4) {
+  border-top-color: $youtube;
 }
 
 .username {
@@ -121,15 +178,32 @@ header {
 .overview-container {
   display: flex;
   flex-direction: column;
+
+  @include for-tablet-portrait-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 22px;
+  }
+
+  @include for-tablet-landscape-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 22px;
+  }
 }
 
 .overview-card {
   background: var(--card-bg);
   margin-bottom: 22px;
-  padding: 28px;
+  padding: 22px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background: var(--hover-bg);
+  }
+
 }
 
 .overview__number {
@@ -153,14 +227,16 @@ header {
   }
   p {
     font-size: 12px;
-    padding-top: 8px;
+    padding-top: 4px;
     font-weight: bold;
+    height: 12px;
   }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-bottom: 22px;
   a {
     color: var(--text-secondary);
   }

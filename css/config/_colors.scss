@@ -12,7 +12,7 @@ $youtube: hsl(348, 97%, 39%);
 
 .dark {
   --bg: hsl(230, 17%, 14%);
-  --top-bg: hsl(232, 19%, 15%);
+  --hover-bg: hsl(232, 19%, 15%);
   --card-bg: hsl(228, 28%, 20%);
   --text-main: hsl(0, 0%, 100%);
   --text-secondary: hsl(228, 34%, 66%);
@@ -22,7 +22,7 @@ $toggle-dark: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
 .light {
   --bg: hsl(0, 0%, 100%);
-  --top-bg: hsl(225, 100%, 98%);
+  --hover-bg: hsl(225, 100%, 98%);
   --card-bg: hsl(227, 47%, 96%);
   --text-main: hsl(230, 17%, 14%);
   --text-secondary: hsl(228, 12%, 44%);
