@@ -16,7 +16,6 @@ body {
   background: var(--bg);
   color: var(--text-main);
   padding: 22px;
-  height: 100vh;
   position: relative;
 }
 
@@ -86,13 +85,13 @@ header {
   &:before {
     content: '';
     position: absolute;
+    height: 5px;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
     z-index: -1;
     margin: -10px 0 0 0;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     background: $instagram;
   }
 }
@@ -178,6 +177,7 @@ header {
 .overview-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 22px;
 
   @include for-tablet-portrait-up {
     display: grid;
@@ -235,8 +235,10 @@ header {
 
 .attribution {
   font-size: 11px;
-  text-align: center;
-  padding-bottom: 22px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
   a {
     color: var(--text-secondary);
   }
