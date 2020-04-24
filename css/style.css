@@ -21,10 +21,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0; }
+  padding: 16px 0;
+  border-top: 1px solid var(--text-secondary); }
   .toggle-container p {
     color: var(--text-secondary);
-    font-weight: bold; }
+    font-weight: bold;
+    margin-right: 8px; }
+  @media (min-width: 600px) {
+    .toggle-container {
+      border: none; } }
 
 .toggle {
   cursor: pointer;
@@ -76,7 +81,7 @@ body {
   position: relative; }
 
 header {
-  border-bottom: 1px solid var(--text-secondary); }
+  padding-bottom: 22px; }
   header h3 {
     font-size: 18px;
     margin-bottom: 6px; }
@@ -85,8 +90,19 @@ header {
         font-size: 24px; } }
   header p {
     color: var(--text-secondary);
-    padding-bottom: 16px;
     font-weight: bold; }
+  @media (min-width: 600px) {
+    header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between; } }
+
+.page-title {
+  padding-bottom: 22px; }
+  @media (min-width: 600px) {
+    .page-title {
+      padding: 0; } }
 
 .main-cards-container {
   font-size: 12px;
